@@ -1,6 +1,7 @@
 apps = [
   'hello.cpp',
   'factorial_cli.cpp',
+  'factorial_file_in.cpp',
 ]
 
 foreach app : apps
