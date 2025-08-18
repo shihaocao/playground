@@ -1,0 +1,9 @@
+Title: C/C++ header include policy
+
+Rules:
+- Always use `#pragma once` at the very top of every C/C++ header file.
+- Don't worry about supporting the Makefile build system
+
+Scope: Entire workspace
+
+
