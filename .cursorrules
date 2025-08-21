@@ -3,6 +3,13 @@ Title: C/C++ header include policy
 Rules:
 - Always use `#pragma once` at the very top of every C/C++ header file.
 - Don't worry about supporting the Makefile build system
+- Only use clang as the build system, remove support for building via gcc
+- If asked to automate something, produce the minimial plumbing example. Do not add example nonsense like this:
+    # Function to print colored output
+    print_info() {
+        echo -e "${BLUE}[INFO]${NC} $1"
+    }
+
 
 Scope: Entire workspace
 

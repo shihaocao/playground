@@ -1,0 +1,2 @@
+option('xray', type: 'boolean', value: false, description: 'Enable LLVM XRay instrumentation')
+

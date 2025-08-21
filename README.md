@@ -41,3 +41,10 @@ With Perf:
 perf record -F 99 -g -- ./builddir/exp/targets/factorial_file_in
 perf script | ~/repos/FlameGraph/stackcollapse-perf.pl | c++filt | ~/repos/FlameGraph/flamegraph.pl > outputs/factorial_file_in.svg
 ```
+
+### LLVM Xray
+
+To run with LLVM xray:
+```
+./run.sh builddir/exp/targets/complex
+```
