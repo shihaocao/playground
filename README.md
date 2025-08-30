@@ -44,7 +44,29 @@ perf script | ~/repos/FlameGraph/stackcollapse-perf.pl | c++filt | ~/repos/Flame
 
 ### LLVM Xray
 
+Setup
+```
+sudo apt-get update && sudo apt-get install -y llvm-tools clang lld graphviz
+
+export PATH=/usr/lib/llvm-20/bin:$PATH
+```
+
+Trace Processor
+```
+# 1) Clone
+git clone https://android.googlesource.com/platform/external/perfetto
+cd perfetto
+
+# 2) Install UI deps (one-time)
+tools/install-build-deps --ui
+```
+
 To run with LLVM xray:
 ```
+./build.sh xray
 ./run.sh builddir/exp/targets/complex
+./analyze.sh builddir/exp/targets/complex
+```
+Then take the json and upload to ui.perfetto.dev
+
 ```
